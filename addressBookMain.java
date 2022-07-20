@@ -88,7 +88,7 @@ public class addressBookMain {
 		System.out.println("Enter Zip Code:");
 		personContact2.setZip(is2.inputString());
 		System.out.println("Enter  Phone Number");
-		personContact2.setPhoneNumber(is1.inputString());
+		personContact2.setPhoneNumber(is2.inputString());
 		
 		addressBookStore addressBookStore = new addressBookStore();
         addressBookStore.Add(personContact0);
