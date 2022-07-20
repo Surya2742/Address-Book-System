@@ -30,4 +30,28 @@ public class addressBookInterface {
 		System.out.println("Re-Correct Phone Number");
 		contact.setPhoneNumber(is4.inputString());
 	}
+	
+	void addContact(addressBook personContact) {
+
+		InputScanner inputScanner = new InputScanner();
+		Instruction instruction = new Instruction();
+		System.out.println("Enter Person contact details");
+		instruction.EnterFirstName();
+		personContact.setFirstName(inputScanner.inputString());
+		instruction.EnterLastName();
+		personContact.setLastName(inputScanner.inputString());
+		instruction.EnterAddress();
+		personContact.setAddress(inputScanner.inputString());
+		instruction.EnterCity();
+		personContact.setCity(inputScanner.inputString());
+		instruction.EnterState();
+		personContact.setState(inputScanner.inputString());
+		instruction.EnterEmail();
+		personContact.setEmail(inputScanner.inputString());
+		instruction.EnterZip();
+		personContact.setZip(inputScanner.inputString());
+		instruction.EnterPhoneNumber();
+		personContact.setPhoneNumber(inputScanner.inputString());
+	}
+	
 }

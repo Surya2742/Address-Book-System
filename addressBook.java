@@ -67,11 +67,5 @@ public class addressBook {
 	public void setPhoneNumber(String contactPhoneNumber) {
 		this.phoneNumber = contactPhoneNumber;
 	}
-
-	public String toString () {
-		return "AddressBook [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
-				+ city + ", state=" + state + ", email=" + email + ", zip=" + zip + ", phoneNumber=" + phoneNumber
-				+ "]";
-	}
 	
 }
