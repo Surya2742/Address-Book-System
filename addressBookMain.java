@@ -109,6 +109,18 @@ public class addressBookMain {
 			addressBookInterface.edit(personContact2);
 		System.out.println("Contact List after edit");
 		addressBookInterface.print(addressBookStore.getContactList());
+		
+		InputScanner is5 = new InputScanner();
+		System.out.println("Enter name of contact you want to delete");
+		String contactName = is5.inputString();
+		if(personContact0.getFirstName().equalsIgnoreCase(contactName) == true)
+			addressBookStore .remove(personContact0);
+		else if(personContact1.getFirstName().equalsIgnoreCase(contactName) == true)
+			addressBookStore.remove(personContact1);
+		else if(personContact2.getFirstName().equalsIgnoreCase(contactName) == true)
+			addressBookStore.remove(personContact2);
+		System.out.println("Contact List after deletion");
+		addressBookInterface.print(addressBookStore.getContactList());
 
 	}
 
