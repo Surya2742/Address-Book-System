@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class addressBookStore {
 	
-	public Set<addressBook> contactList = new HashSet<addressBook>();
+	public Set<addressBook> contactList = new HashSet<>();
 
 	public Set<addressBook> getContactList() {
 		return contactList;

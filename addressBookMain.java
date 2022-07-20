@@ -67,11 +67,11 @@ public class addressBookMain {
 		personContact1.setEmail(is1.inputString());
 		System.out.println("Enter Zip Code:");
 		personContact1.setZip(is1.inputString());
-		System.out.println("Enter  Phone Number");
+		System.out.println("Enter Phone Number");
 		personContact1.setPhoneNumber(is1.inputString());
 		
 		addressBook personContact2 = new addressBook();
-		System.out.println("Enter Following Contact Details for Person 2");
+		System.out.println("Enter Following Contact Details for Person 3");
 		InputScanner is2 = new InputScanner();
 		System.out.println("Enter First Name:");
 		personContact2.setFirstName(is2.inputString());
@@ -87,13 +87,28 @@ public class addressBookMain {
 		personContact2.setEmail(is2.inputString());
 		System.out.println("Enter Zip Code:");
 		personContact2.setZip(is2.inputString());
-		System.out.println("Enter  Phone Number");
-		personContact2.setPhoneNumber(is1.inputString());
+		System.out.println("Enter Phone Number");
+		personContact2.setPhoneNumber(is2.inputString());
 		
 		addressBookStore addressBookStore = new addressBookStore();
         addressBookStore.Add(personContact0);
         addressBookStore.Add(personContact1);
         addressBookStore.Add(personContact2);
+        
+        addressBookInterface addressBookInterface = new addressBookInterface();
+		addressBookInterface.print(addressBookStore.getContactList());
+		
+		InputScanner is3 = new InputScanner();
+		System.out.println("Enter name of contact you want to edit");
+		String name = is3.inputString();
+		if(personContact0.getFirstName().equalsIgnoreCase(name) == true)
+			addressBookInterface.edit(personContact0);
+		else if(personContact1.getFirstName().equalsIgnoreCase(name) == true)
+			addressBookInterface.edit(personContact1);
+		else if(personContact2.getFirstName().equalsIgnoreCase(name) == true)
+			addressBookInterface.edit(personContact2);
+		System.out.println("Contact List after edit");
+		addressBookInterface.print(addressBookStore.getContactList());
 
 	}
 
