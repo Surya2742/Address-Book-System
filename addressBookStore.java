@@ -5,17 +5,17 @@ import java.util.Set;
 
 public class addressBookStore {
 	
-	public Set<AddressBook> contactList = new HashSet<>();
+	public Set<addressBook> contactList = new HashSet<>();
 
-	public Set<AddressBook> getContactList() {
+	public Set<addressBook> getContactList() {
 		return contactList;
 	}
 
-	void add(AddressBook addressBook) {
+	void add(addressBook addressBook) {
 		contactList.add(addressBook);
 	}
 
-	public void remove(AddressBook contact) {
+	public void remove(addressBook contact) {
 		contactList.remove(contact);
 	}
 	

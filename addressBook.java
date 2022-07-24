@@ -1,6 +1,6 @@
 package addressBookSystem;
 
-public class AddressBook {
+public class addressBook {
 
 	private String firstName, lastName, address, city, state, email, zip, phoneNumber;
 

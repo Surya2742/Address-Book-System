@@ -4,12 +4,12 @@ public class addressBookMain {
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book System");
-		AddressBook contact = new AddressBook();
+		addressBook contact = new addressBook();
 		InputScanner inputScanner = new InputScanner();
 		Instruction instruction = new Instruction();
 		
 		System.out.println("Enter Following Contact Details for Person 1");
-		AddressBook personContact0 = new AddressBook();
+		addressBook personContact0 = new addressBook();
 		instruction.EnterFirstName();
 		String contactFirstName = inputScanner.inputString();
 		personContact0.setFirstName(contactFirstName);
@@ -42,7 +42,7 @@ public class addressBookMain {
 		String contactPhoneNumber = inputScanner.inputString();
 		personContact0.setPhoneNumber(contactPhoneNumber);
 		
-		AddressBook personContact1 = new AddressBook();
+		addressBook personContact1 = new addressBook();
 		System.out.println("Enter Following Contact Details for Person 2");
 		instruction.EnterFirstName();
 		personContact1.setFirstName(inputScanner.inputString());
@@ -61,7 +61,7 @@ public class addressBookMain {
 		instruction.EnterPhoneNumber();
 		personContact1.setPhoneNumber(inputScanner.inputString());
 		
-		AddressBook personContact2 = new AddressBook();
+		addressBook personContact2 = new addressBook();
 		System.out.println("Enter Following Contact Details for Person 3");
 		instruction.EnterFirstName();
 		personContact2.setFirstName(inputScanner.inputString());
