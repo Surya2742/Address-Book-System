@@ -7,7 +7,7 @@ public class Instruction {
 	}
 	public void EnterLastName () {
         System.out.println("Enter Last Name:");
-}
+	}
 	public void EnterAddress() {
         System.out.println("Enter Address:");
 	}

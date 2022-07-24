@@ -4,12 +4,12 @@ public class addressBookMain {
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book System");
-		addressBook contact = new addressBook();
+		AddressBook contact = new AddressBook();
 		InputScanner inputScanner = new InputScanner();
 		Instruction instruction = new Instruction();
 		
 		System.out.println("Enter Following Contact Details for Person 1");
-		addressBook personContact0 = new addressBook();
+		AddressBook personContact0 = new AddressBook();
 		instruction.EnterFirstName();
 		String contactFirstName = inputScanner.inputString();
 		personContact0.setFirstName(contactFirstName);
@@ -42,7 +42,7 @@ public class addressBookMain {
 		String contactPhoneNumber = inputScanner.inputString();
 		personContact0.setPhoneNumber(contactPhoneNumber);
 		
-		addressBook personContact1 = new addressBook();
+		AddressBook personContact1 = new AddressBook();
 		System.out.println("Enter Following Contact Details for Person 2");
 		instruction.EnterFirstName();
 		personContact1.setFirstName(inputScanner.inputString());
@@ -61,7 +61,7 @@ public class addressBookMain {
 		instruction.EnterPhoneNumber();
 		personContact1.setPhoneNumber(inputScanner.inputString());
 		
-		addressBook personContact2 = new addressBook();
+		AddressBook personContact2 = new AddressBook();
 		System.out.println("Enter Following Contact Details for Person 3");
 		instruction.EnterFirstName();
 		personContact2.setFirstName(inputScanner.inputString());
@@ -81,9 +81,9 @@ public class addressBookMain {
 		personContact2.setPhoneNumber(inputScanner.inputString());
 		
 		addressBookStore addressBookStore = new addressBookStore();
-        addressBookStore.Add(personContact0);
-        addressBookStore.Add(personContact1);
-        addressBookStore.Add(personContact2);
+        addressBookStore.add(personContact0);
+        addressBookStore.add(personContact1);
+        addressBookStore.add(personContact2);
         
         addressBookInterface addressBookInterface = new addressBookInterface();
 		addressBookInterface.print(addressBookStore.getContactList());
@@ -95,12 +95,15 @@ public class addressBookMain {
 		switch (choice) {
 		case 1:
 			System.out.println("Enter the contact Details of Persons you want to add");
-				addressBookInterface.addContact(contact);
-				addressBookStore.Add(contact);
+			System.out.println("Enter the no. of Contacts to add");
+			int noOfContacts = inputScanner.inputInteger();
+			for (int i = 1; i < noOfContacts; i++) {			
+			addressBookInterface.addContact(contact);
+				addressBookStore.add(contact);
 				System.out.println("Contact List after add");
-				addressBookStore.Add(contact);
+				addressBookStore.add(contact);
 				addressBookInterface.print(addressBookStore.getContactList());
-			
+			}
 			break;
 		case 2:
 

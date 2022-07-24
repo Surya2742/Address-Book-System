@@ -4,13 +4,13 @@ import java.util.Set;
 
 public class addressBookInterface {
 
-	void print(Set<addressBook> contactList) {
-		for (addressBook s : contactList) {
+	void print(Set<AddressBook> contactList) {
+		for (AddressBook s : contactList) {
 			System.out.println(s);
 			}
 	}
 	
-	void edit(addressBook contact) {
+	void edit(AddressBook contact) {
 		InputScanner is4 = new InputScanner();
 		System.out.println("Edit the details First Name, Last Name, Address, City, State, Zip, Phone Number, Email respectively");
 		System.out.println("Re-Correct First Name");
@@ -31,7 +31,7 @@ public class addressBookInterface {
 		contact.setPhoneNumber(is4.inputString());
 	}
 	
-	void addContact(addressBook personContact) {
+	void addContact(AddressBook personContact) {
 
 		InputScanner inputScanner = new InputScanner();
 		Instruction instruction = new Instruction();
